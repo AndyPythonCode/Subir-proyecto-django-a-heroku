@@ -26,7 +26,9 @@
    * La carpeta que iran todos los archivos estaticos.
 - __STATICFILES_DIRS = (Path.joinpath(BASE_DIR, 'static'),)__
    * Archivos estaticos adicionales.
-
+- __ALLOWED_HOSTS = ['URL','LOCALHOST']__
+   * Decirle a django cuales host estan permitidos, el url lo veremos mas abajo... tambien puedes escribir '*' para decirle que todos.
+   
 ### Activate Django-Heroku.
 - __django_heroku.settings(locals())__
    * configuraciones que pide heroku
@@ -62,6 +64,24 @@ Django no admite el servicio de archivos estáticos en producción. Sin embargo,
     * hacer migracion de tu base de datos en heroku.
 6. __heroku open__
     * ver pagina.
+
+### Usar PostgreSql
+- __Ojo__: Heroku Postgres es un servicio de base de datos SQL administrado proporcionado directamente por Heroku. Puede acceder a una base de datos de Heroku Postgres desde cualquier idioma con un controlador PostgreSQL, incluidos todos los idiomas admitidos oficialmente por Heroku.
+
+- Ir a tu app en heroku, luego ir a setting y presionar 'reveal config vars' y copiar DATABASE_URL ya que es por defecto de heroku.
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'd79emu3263ip2s',
+        'HOST': 'ec2-54-234-28-165.compute-1.amazonaws.com',
+        'PORT': '5432',
+        'USER': 'esizurvhlzmibt',
+        'PASSWORD': 'b4707d197279836d97a1f9d0c2f5d5fd778185080535a80995655f189c460b53',
+    }
+}
+- __PostgresSQL__ ://__USER__(esizurvhlzmibt):__PASSWORD__(b4707d197279836d97a1f9d0c2f5d5fd778185080535a80995655f189c460b53)
+@__HOST__(ec2-54-234-28-165.compute1.amazonaws.com):__PORT__(5432)/__NAME__:( d79emu3263ip2s)
+
 
 ### Comandos adicionales(Opcional)
 - __heroku run python manage.py createsuperuser__
