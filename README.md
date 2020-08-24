@@ -69,16 +69,26 @@ Django no admite el servicio de archivos estáticos en producción. Sin embargo,
 - __Ojo__: Heroku Postgres es un servicio de base de datos SQL administrado proporcionado directamente por Heroku. Puede acceder a una base de datos de Heroku Postgres desde cualquier idioma con un controlador PostgreSQL, incluidos todos los idiomas admitidos oficialmente por Heroku.
 
 - Ir a tu app en heroku, luego ir a setting y presionar 'reveal config vars' y copiar DATABASE_URL ya que es por defecto de heroku.
+
+</br>
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'd79emu3263ip2s',
-        'HOST': 'ec2-54-234-28-165.compute-1.amazonaws.com',
-        'PORT': '5432',
-        'USER': 'esizurvhlzmibt',
-        'PASSWORD': 'b4707d197279836d97a1f9d0c2f5d5fd778185080535a80995655f189c460b53',
-    }
-}
+
+</br>
+
+     'default': {
+        - 'ENGINE': 'django.db.backends.postgresql',
+        - 'NAME': 'd79emu3263ip2s',
+        - 'HOST': 'ec2-54-234-28-165.compute-1.amazonaws.com',
+        - 'PORT': '5432',
+        - 'USER': 'esizurvhlzmibt',
+        - 'PASSWORD': 'b4707d197279836d97a1f9d0c2f5d5fd778185080535a80995655f189c460b53',
+     }
+
+</br>
+
+ }
+ 
 - __PostgresSQL__ ://__USER__(esizurvhlzmibt):__PASSWORD__(b4707d197279836d97a1f9d0c2f5d5fd778185080535a80995655f189c460b53)
 @__HOST__(ec2-54-234-28-165.compute1.amazonaws.com):__PORT__(5432)/__NAME__:( d79emu3263ip2s)
 
