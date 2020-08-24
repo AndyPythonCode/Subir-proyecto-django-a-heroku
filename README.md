@@ -3,31 +3,33 @@
 
 ## Se necesita:
 
-1. git 
-    * administrador de versiones
-2. heroku cli 
-    * hacer cambios a heroku
-3. gunicorn 
-    * servidor en el que va a correr
+1. __git__ 
+    * administrador de versiones.
     
-4. whitenoise 
-    * ir a buscar los archivos estaticos
-
-5. django-heroku
-    * configura automáticamente
+2. __heroku cli__
+    * hacer cambios a heroku.
+    
+3. __gunicorn__ 
+    * servidor en el que va a correr.
+    
+4. __whitenoise__
+    * ir a buscar los archivos estaticos.
+    
+5. __django-heroku__
+    * configura automáticamente.
 
 
 ## Configuraciones en django.seeting:
-- import django_heroku
+- __import django_heroku__
    * El paquete django-heroku configura automáticamente su aplicación Django para que funcione en Heroku.
-- STATIC_ROOT = Path.joinpath(BASE_DIR, 'staticfiles')
+- __STATIC_ROOT = Path.joinpath(BASE_DIR, 'staticfiles')__
    * La carpeta que iran todos los archivos estaticos.
-- STATICFILES_DIRS = (Path.joinpath(BASE_DIR, 'static'),)
+- __STATICFILES_DIRS = (Path.joinpath(BASE_DIR, 'static'),)__
    * Archivos estaticos adicionales.
 
 ## Activate Django-Heroku.
-- django_heroku.settings(locals())
-        * configuraciones que pide heroku
+- __django_heroku.settings(locals())__
+   * configuraciones que pide heroku
 
 ## Archivos estaticos 
 __opcional__: Django no admite el servicio de archivos estáticos en producción. Sin embargo, el fantástico proyecto WhiteNoise puede integrarse en su aplicación Django y fue diseñado exactamente con este propósito en mente. A continuación, instale WhiteNoise en su aplicación Django. Esto se hace en settings.pyla sección de middleware (en la parte superior):
@@ -35,33 +37,34 @@ __opcional__: Django no admite el servicio de archivos estáticos en producción
     * 'whitenoise.middleware.WhiteNoiseMiddleware',
 
 ## Ve a tu proyecto
-1. Crea un archivo con ese nombre Procfile
-    * Web: gunicorn myapp.wsgi
-2. Guarda todos los paquetes instalados en un txt
-    * pip freeze >requirements.txt
-3. Crear un repositorio
-    * git init
-4. guardar los cambios
-    * git add.
-5. Salvar el proyecto
-    * git commit m- "Mensaje que deseas"
+1. __Web: gunicorn myapp.wsgi__
+    * Crea un archivo con ese nombre Procfile.
+2. __pip freeze >requirements.txt__
+    * Guarda todos los paquetes instalados en un txt.
+3. __git init__
+    * Crear un repositorio.
+4. __git add__
+    * guardar los cambios.
+5. __git commit m- "Mensaje que deseas"__
+    * Salvar el proyecto.
 
 ## Subir proyecto a heroku
 ### Usare visual studio code:
-1. Crear una cuenta en heroku
+1. __Crear una cuenta en heroku__
     * Poder utilizar el servicio en la nube.
-2. heroku login
+2. __heroku login__
     * sincronizar tu cuenta con tu git.
-3. heroku create app_name
+3. __heroku create app_name__
     * Dominio.
-4. git push heroku master 
+4. __git push heroku master__ 
     * subir git a heroku.
-5. heroku run python manage.py migrate 
+5. __heroku run python manage.py migrate__
     * hacer migracion de tu base de datos en heroku.
-6. heroku open
+6. __heroku open__
     * ver pagina.
 
 ## Comandos adicionales(Opcional)
-- heroku run python manage.py createsuperuser
+- __heroku run python manage.py createsuperuser__
+   * Crear un usuario para la base de datos con todos los privilegios.
 
-> Andy Arciniega
+> Andy Juan Arciniega.
