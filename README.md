@@ -96,5 +96,9 @@ DATABASES = {
 ### Comandos adicionales(Opcional)
 - __heroku run python manage.py createsuperuser__
    * Crear un usuario para la base de datos con todos los privilegios.
+- __heroku ps__
+   * Lista de dynos para una app.
+- __heroku ps:stop run.4859__
+   * Detener dynos corriendo.
 
 > Andy Juan Arciniega.
