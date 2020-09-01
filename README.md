@@ -58,11 +58,13 @@ Django no admite el servicio de archivos estáticos en producción. Sin embargo,
     * sincronizar tu cuenta con tu git.
 3. __heroku create app_name__
     * Dominio.
-4. __git push heroku master__ 
+4. __heroku git:remote -a app_name__
+   * para sincronizar tu app con tu proyecto
+5. __git push heroku master__ 
     * subir git a heroku.
-5. __heroku run python manage.py migrate__
+6. __heroku run python manage.py migrate__
     * hacer migracion de tu base de datos en heroku.
-6. __heroku open__
+7. __heroku open__
     * ver pagina.
 
 ### Usar PostgreSql
